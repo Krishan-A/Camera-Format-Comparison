@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CameraFormatComparisonPKG.CameraFormatComparisonController">
+    <children>
+        <Label focusTraversable="false" layoutX="217.0" layoutY="25.0" text="Camera Format Comparison" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Heavy" size="40.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="inputFormatList" layoutX="94.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="153.0" promptText="Input Format" visibleRowCount="24" />
+        <Label fx:id="inputFormatReq" focusTraversable="false" layoutX="30.0" layoutY="123.0" text="Required" textFill="RED" visible="false" />
+        <Label fx:id="inputDimensions" alignment="CENTER" focusTraversable="false" layoutX="94.0" layoutY="147.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.5" prefHeight="26.0" prefWidth="152.0" text="Width x Height" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <TextField fx:id="inputFocalLength" alignment="CENTER" layoutX="94.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="153.0" promptText="Input Focal Length">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></TextField>
+        <Label fx:id="inputFocalLengthReq" focusTraversable="false" layoutX="30.0" layoutY="180.0" text="Required" textFill="RED" visible="false" />
+        <TextField fx:id="inputApertureValue" alignment="CENTER" layoutX="94.0" layoutY="207.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="153.0" promptText="Input Aperture Value">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></TextField>
+        <Label fx:id="inputApertureValueReq" focusTraversable="false" layoutX="30.0" layoutY="211.0" text="Required" textFill="RED" visible="false" />
+        <Label focusTraversable="false" layoutX="100.0" layoutY="243.0" text="Distance">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <Slider fx:id="distanceSlider" blockIncrement="0.25" layoutX="160.0" layoutY="245.0" max="30.0" prefWidth="200.0" value="10.0" />
+        <Label fx:id="distanceReadout" focusTraversable="false" layoutX="360.0" layoutY="243.0" text="10.00 feet">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <ComboBox fx:id="outputFormatList" layoutX="272.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="153.0" promptText="Output Format" visibleRowCount="24" />
+        <Label fx:id="outputFormatReq" focusTraversable="false" layoutX="435.0" layoutY="123.0" text="Required" textFill="RED" visible="false" />
+        <Label fx:id="outputDimensions" alignment="CENTER" focusTraversable="false" layoutX="272.0" layoutY="147.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.5" prefHeight="26.0" prefWidth="152.0" text="Width x Height" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <Label fx:id="outputFocalLength" alignment="CENTER" focusTraversable="false" layoutX="272.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.5" prefHeight="26.0" prefWidth="152.0" text="Output Focal Length" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <Label fx:id="outputApertureValue" alignment="CENTER" focusTraversable="false" layoutX="272.0" layoutY="207.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.5" prefHeight="26.0" prefWidth="152.0" text="Output Aperture Value" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Label>
+        <Button fx:id="calculateButton" alignment="CENTER" layoutX="450.0" layoutY="175.0" mnemonicParsing="false" onAction="#calculatePressed" prefHeight="26.0" prefWidth="80.0" text="Calculate" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font></Button>
+        <Button fx:id="resetButton" alignment="CENTER" layoutX="450.0" layoutY="207.0" mnemonicParsing="false" onAction="#resetPressed" prefHeight="26.0" prefWidth="80.0" text="Reset" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Button>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#f4f4f4" height="150.0" layoutX="558.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="340.0" />
+        <Label focusTraversable="false" layoutX="601.0" layoutY="165.0" text="AoVº:">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="587.0" layoutY="195.0" text="FoV (ft):">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="585.0" layoutY="225.0" text="FoV (m):">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="643.0" layoutY="140.0" text="Horizontal">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="hAOV" alignment="CENTER" focusTraversable="false" layoutX="645.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="10.50" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="hFOVFeet" alignment="CENTER" focusTraversable="false" layoutX="645.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="10.51" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="hFOVMeters" alignment="CENTER" focusTraversable="false" layoutX="645.0" layoutY="225.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="10.52" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="736.0" layoutY="140.0" text="Vertical">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="vAOV" alignment="CENTER" focusTraversable="false" layoutX="729.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="11.50" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="vFOVFeet" alignment="CENTER" focusTraversable="false" layoutX="729.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="11.51" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="vFOVMeters" alignment="CENTER" focusTraversable="false" layoutX="729.0" layoutY="225.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="11.52" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="817.0" layoutY="140.0" text="Diagonal">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="dAOV" alignment="CENTER" focusTraversable="false" layoutX="814.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="12.50" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="dFOVFeet" alignment="CENTER" focusTraversable="false" layoutX="814.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="11.51" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="dFOVMeters" alignment="CENTER" focusTraversable="false" layoutX="814.0" layoutY="225.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="60.0" text="12.52" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#f4f4f4" height="150.0" layoutX="94.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" width="330.0" />
+        <Label focusTraversable="false" layoutX="199.0" layoutY="302.0" text="Depth of Field">
+            <font>
+                <Font name="Avenir Heavy" size="18.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="155.0" layoutY="337.0" text="Total:">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="totalDOFDisplay" focusTraversable="false" layoutX="207.0" layoutY="337.0" text="10.50 feet, 03.25 meters">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="122.0" layoutY="367.0" text="Near Limit:">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="nearDOFDisplay" focusTraversable="false" layoutX="207.0" layoutY="367.0" text="10.50 feet, 03.25 meters">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label focusTraversable="false" layoutX="132.0" layoutY="397.0" text="Far Limit:">
+            <font>
+                <Font name="Avenir Heavy" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="farDOFDisplay" focusTraversable="false" layoutX="207.0" layoutY="397.0" text="10.50 feet, 03.25 meters">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#f4f4f4" height="150.0" layoutX="451.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" width="447.0" />
+        <Label focusTraversable="false" layoutX="627.0" layoutY="302.0" text="Format List">
+            <font>
+                <Font name="Avenir Heavy" size="18.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="475.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="IMAX  Film (15-Perf)" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="imaxLensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="475.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="80mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="613.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="Full-Frame (135 Film)" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="fullFrameLensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="613.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="41mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="755.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="S35mm Film (4-Perf)" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="s35LensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="755.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="28mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="475.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="Super-16mm Film" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="s16LensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="475.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="14mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="613.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="Super-8mm Film" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="s8LensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="613.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="7mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="755.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="iPhone X-Series" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="iPhoneLensDisplay" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="755.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="123.0" text="6mm" textAlignment="CENTER">
+            <font>
+                <Font name="Avenir Roman" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="512.0" opacity="0.35" text="AoVº = Angle of View in Degrees; FoV = Field of View; ft = Feet; m = Meters; iPhone X-Series cameras come with 1.54mm, 4.25mm, and 6.0mm iSight camera lenses                                  © Krishan Agarwal">
+            <font>
+                <Font name="Avenir Roman" size="10.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
