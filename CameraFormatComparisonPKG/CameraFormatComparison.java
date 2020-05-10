@@ -8,8 +8,7 @@ import javafx.stage.Stage;
 /*
 Date: April 30, 2020
 Programmer: Krishan Agarwal
-Issues:
-
+Issues: TextField inputs accept hexadecimal values
 Assumptions:
 
 Program Description: Compare different camera formats where a primary camera format size, lens, lens settings, and a
