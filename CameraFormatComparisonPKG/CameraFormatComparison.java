@@ -6,9 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /*
-Course: CS422 Advanced Programming
-Professor: Vic Berry
-Project: Final Project
 Date: April 30, 2020
 Programmer: Krishan Agarwal
 Issues:
